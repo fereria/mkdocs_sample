@@ -1,0 +1,5 @@
+---
+title: SamplePage
+tags:
+    - sample
+---
