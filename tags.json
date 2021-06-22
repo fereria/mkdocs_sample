@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Home",
+    "file_name": "index",
+    "url": "https://fereria.github.io/reincarnation_tech/",
+    "tags": [],
+    "description": []
+  },
+  {
+    "title": "Sample",
+    "file_name": "sample",
+    "url": "https://fereria.github.io/reincarnation_tech/sample/",
+    "tags": [],
+    "description": []
+  },
+  {
+    "title": "サンプルです",
+    "file_name": "sample",
+    "url": "https://fereria.github.io/reincarnation_tech/60_JupyterNotebook/sample/",
+    "tags": [],
+    "description": []
+  }
+]
