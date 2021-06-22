@@ -1,6 +1,6 @@
-site_name: Reincarnation+#Tech
+site_name: SamplePage
 repo_url: https://github.com/fereria/mkdocs_sample
-site_url: https://fereria.github.io/mkdocs_sample
+site_url: https://fereria.github.io/mkdocs_sample/
 site_author: SampleName
 
 theme:
@@ -43,27 +43,11 @@ extra_javascript:
 
 plugins:
   - drawio-exporter:
-      # Diagrams are cached to speed up site generation. The default path is
-      # drawio-exporter, relative to the documentation directory.
       cache_dir: "drawio-exporter"
-      # Path to the Draw.io executable:
-      #   * drawio on Linux
-      #   * draw.io on macOS
-      #   * or draw.io.exe on Windows
-      # We'll look for it on your system's PATH, then default installation
-      # paths. If we can't find it we'll warn you.
       drawio_executable: null
-      # Additional Draw.io CLI args
       drawio_args: ["--no-sandbox"]
-      # Output format (see draw.io --help | grep format)
       format: svg
-      # Embed format
-      #   * The default is to embed via the <img> tag, only rewriting the
-      #     value of the src attribute.
-      #   * Consider <object type="image/svg+xml" data="{img_src}"></object>
-      #     to enable interactive elements (like hyperlinks) in SVGs.
       embed_format: "{img_open}{img_src}{img_close}"
-      # Glob pattern for matching source files
       sources: "*.drawio"
   - git-revision-date-localized:
       type: iso_datetime
