@@ -1,7 +1,7 @@
 site_name: Reincarnation+#Tech
-repo_url: https://github.com/fereria/reincarnation_tech
-site_url: https://fereria.github.io/reincarnation_tech/
-site_author: Megumi Ando@Remiria
+repo_url: https://github.com/fereria/mkdocs_sample
+site_url: https://fereria.github.io/mkdocs_sample
+site_author: SampleName
 
 theme:
   favicon: "favicon.ico"
@@ -17,6 +17,7 @@ theme:
   icon:
     repo: fontawesome/brands/github
 
+# TwitterやGithubのリンクを指定できるアイコンはサイト右下に表示される
 extra:
   social:
     - icon: fontawesome/brands/github-alt
@@ -35,9 +36,10 @@ extra_javascript:
   - javascripts/extra.js
   - https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js
 
-google_analytics:
-  - UA-134257918-1
-  - auto
+# Googleアナリティクスを使いたい場合。
+# google_analytics:
+#   - UA-#######
+#   - auto
 
 plugins:
   - drawio-exporter:
