@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
-     <loc>https://fereria.github.io/reincarnation_tech/</loc>
+     <loc>https://fereria.github.io/mkdocs_sample/</loc>
      <lastmod>2021-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://fereria.github.io/reincarnation_tech/sample/</loc>
+     <loc>https://fereria.github.io/mkdocs_sample/sample/</loc>
      <lastmod>2021-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://fereria.github.io/reincarnation_tech/60_JupyterNotebook/sample/</loc>
+     <loc>https://fereria.github.io/mkdocs_sample/60_JupyterNotebook/sample/</loc>
+     <lastmod>2021-06-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://fereria.github.io/mkdocs_sample/tags/sample/</loc>
      <lastmod>2021-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
