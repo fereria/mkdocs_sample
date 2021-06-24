@@ -1,8 +1,10 @@
+# サイト名、URL、GitリポジトリのURL、自分の名前を入れる
 site_name: SamplePage
 repo_url: https://github.com/fereria/mkdocs_sample
 site_url: https://fereria.github.io/mkdocs_sample/
 site_author: SampleName
 
+## Materialテーマの見た目(色とか)
 theme:
   favicon: "favicon.ico"
   custom_dir: "theme"
@@ -12,12 +14,16 @@ theme:
     accent: Green
     primary: Green
   features:
-    - navigation.tabs
-    - navigation.expand
+    - navigation.tabs # Tab表示
+    - navigation.expand #左の記事一覧をデフォルトで開いた状態に
   icon:
     repo: fontawesome/brands/github
 
-# TwitterやGithubのリンクを指定できるアイコンはサイト右下に表示される
+# TwitterやGithubのリンクを指定できる
+# アイコンはサイト右下に表示される
+# icon と link はワンセット。
+# https://fontawesome.com/
+# このサイトの Free Iconsの名前をみて fontawesome/<name> で指定できる。
 extra:
   social:
     - icon: fontawesome/brands/github-alt
@@ -26,22 +32,30 @@ extra:
       link: https://twitter.com/fereria
     - icon: fontawesome/solid/bookmark
       link: https://zenn.dev/remiria
+    - icon: fontawesome/solid/cannabis
+      link: http://localhost
 
+# fontawesomeを使えるようにする
+# stylesheetで見た目の微調整をする
+# 作図できるようにする
+# ために、CSSを追加している。
 extra_css:
   - https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
   - stylesheets/extra.css
   - https://unpkg.com/mermaid@8.0.0/dist/mermaid.css
 
+# 作図を表示するために使用
 extra_javascript:
-  - javascripts/extra.js
   - https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js
 
-# Googleアナリティクスを使いたい場合。
+# Googleアナリティクスを使いたい場合は↓を追加
 # google_analytics:
 #   - UA-#######
 #   - auto
 
+# 拡張を入れる。
 plugins:
+  # Drawioを画像ファイルに変換せずに使えるようにするプラグイン
   - drawio-exporter:
       cache_dir: "drawio-exporter"
       drawio_executable: null
@@ -49,18 +63,24 @@ plugins:
       format: svg
       embed_format: "{img_open}{img_src}{img_close}"
       sources: "*.drawio"
+  # GithubのCommit時間をページに表示
   - git-revision-date-localized:
       type: iso_datetime
+  # 日本語対応
   - search:
       lang:
         - en
         - ja
+  # .pagesでページ階層を指定できるようにする
   - awesome-pages
+  # main.py で色々カスタムなマクロを使用できるようにする
   - macros
+  # Tagを指定できるようにする
   - mdoctag:
       tagpage_dir: "tags"
       data_filename: "tags.json"
 
+# 使ってないのもあるけど、色々Extension
 markdown_extensions:
   - hbfm.quote_uri_hash
   - hbfm.inline_coloring
@@ -90,6 +110,10 @@ markdown_extensions:
   - pymdownx.highlight:
       linenums: true
 
+# フォルダ名は英語、表示は日本語にしたいときに書いておく。
+# create_mkdocs_pages.py で使用。
+# この情報をもとに .pages を自動生成する。
+# mkdocsのプラグインとかではなく、自分のスクリプト用の情報
 replace_foldername:
   - JupyterNotebook: のーとぶっく
   - SubDir: サブディレクトリ
