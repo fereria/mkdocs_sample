@@ -2,6 +2,7 @@
 title: SamplePage
 tags:
     - sample
+description: Tagsのページに表示される説明文書
 ---
 
 色々カスタマイズして、デフォルトでは使用できない機能をつかえます。
