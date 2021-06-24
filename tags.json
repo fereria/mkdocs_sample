@@ -7,10 +7,12 @@
     "description": []
   },
   {
-    "title": "Sample",
+    "title": "SamplePage",
     "file_name": "sample",
     "url": "https://fereria.github.io/mkdocs_sample/sample/",
-    "tags": [],
+    "tags": [
+      "sample"
+    ],
     "description": []
   },
   {
