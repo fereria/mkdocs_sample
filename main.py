@@ -37,11 +37,11 @@ def define_env(env):
         return None
 
     @env.macro
-    def update_info(num, header="##"):
+    def update_info(num, header="##", branch='master'):
 
         repo = Repo(os.getcwd())
         msg = []
-        for commit in repo.iter_commits('master', max_count=num):
+        for commit in repo.iter_commits(branch, max_count=num):
             dt = datetime.fromtimestamp((commit.committed_date))
             buff = commit.message.split("\n")
             msg.append(f"{header} {dt.strftime('%Y-%m-%d %H:%M:%S')} {buff[0]}")
