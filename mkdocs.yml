@@ -92,3 +92,4 @@ markdown_extensions:
 
 replace_foldername:
   - JupyterNotebook: のーとぶっく
+  - SubDir: サブディレクトリ
