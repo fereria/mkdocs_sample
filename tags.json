@@ -7,6 +7,13 @@
     "description": []
   },
   {
+    "title": "更新履歴",
+    "file_name": "update",
+    "url": "https://fereria.github.io/mkdocs_sample/update/",
+    "tags": [],
+    "description": []
+  },
+  {
     "title": "SamplePage",
     "file_name": "sample",
     "url": "https://fereria.github.io/mkdocs_sample/00_Sample/sample/",
