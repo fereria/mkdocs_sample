@@ -1,6 +1,6 @@
 [
   {
-    "title": "Home",
+    "title": "これはトップページです",
     "file_name": "index",
     "url": "https://fereria.github.io/mkdocs_sample/",
     "tags": [],
@@ -13,7 +13,7 @@
     "tags": [
       "sample"
     ],
-    "description": []
+    "description": "Tagsのページに表示される説明文書"
   },
   {
     "title": "サンプルです",
