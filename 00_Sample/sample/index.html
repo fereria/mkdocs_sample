@@ -649,25 +649,41 @@
                 <p>色々カスタマイズして、デフォルトでは使用できない機能をつかえます。</p>
 <h2 id="_1">マクロサンプル<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <h2 id="notebook">Notebookの埋め込み<a class="headerlink" href="#notebook" title="Permanent link">¶</a></h2>
-<p>ConvertEerror!! -&gt;notebooks/sample__サンプルです.ipynb<br />
-Traceback (most recent call last):<br />
-  File "/work_dir/main.py", line 114, in embedIpynb<br />
-    (body, reources) = exporter.from_notebook_node(f)<br />
-  File "/usr/local/lib/python3.7/site-packages/nbconvert/exporters/templateexporter.py", line 390, in from_notebook_node<br />
-    output = self.template.render(nb=nb_copy, resources=resources)<br />
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render<br />
-    self.environment.handle_exception()<br />
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception<br />
-    reraise(*rewrite_traceback_stack(source=source))<br />
-  File "/usr/local/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise<br />
-    raise value.with_traceback(tb)<br />
-  File "/work_dir/template/embed_markdown.tpl", line 1, in top-level template code<br />
-    {% extends 'markdown.tpl'%}<br />
-  File "/work_dir/template/markdown.tpl", line 1, in top-level template code<br />
-    {% extends 'display_priority.tpl' %}<br />
-  File "/usr/local/share/jupyter/nbconvert/templates/compatibility/display_priority.tpl", line 2, in top-level template code<br />
-    {%- extends 'display_priority.j2' -%}<br />
-jinja2.exceptions.TemplateNotFound: display_priority.j2</p>
+<div class="admonition example">
+<p><i class="fa fa-angle-double-right"></i> In [4]:<br />
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pxr</span> <span class="kn">import</span> <span class="n">Usd</span>
+<span class="n">stage</span> <span class="o">=</span> <span class="n">Usd</span><span class="o">.</span><span class="n">Stage</span><span class="o">.</span><span class="n">CreateInMemory</span><span class="p">()</span>
+<span class="n">stage</span><span class="o">.</span><span class="n">DefinePrim</span><span class="p">(</span><span class="s2">&quot;/sample&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">stage</span><span class="o">.</span><span class="n">ExportToString</span><span class="p">())</span>
+</code></pre></div>
+</td></tr></table></p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>#usda 1.0
+(
+    doc = &quot;&quot;&quot;Generated from Composed Stage of root layer 
+&quot;&quot;&quot;
+)
+
+def &quot;sample&quot;
+{
+}
+</code></pre></div>
+</td></tr></table>
+</div>
+<p><i class="fa fa-bookmark"></i> <a href="https://github.com/fereria/mkdocs_sample/tree/master/notebooks/sample__サンプルです.ipynb">sample__サンプルです.ipynb</a></p>
+</div>
 <p>リポジトリ以下にあるipynbをmarkdown 内に埋め込みできる。</p>
 <h2 id="twitter">Twitter<a class="headerlink" href="#twitter" title="Permanent link">¶</a></h2>
 <blockquote class="twitter-tweet"><a href="https://twitter.com/fereria/status/1164544426967875584"></a></blockquote>
