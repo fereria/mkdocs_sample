@@ -12,6 +12,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Send Slack Start
+        env:
+          HOOK_URL: ${{ secrets.SlackURL }}
+        run: |
+          curl -X POST --data-urlencode "payload={\"channel\": \"#github_actions\", \"username\": \"github_aciton_bot\", \"text\": \"GithubPagesのビルドを開始しました...\"}" ${HOOK_URL}
+
       - name: Git config
         run: |
           git config --global core.symlinks true
@@ -42,3 +48,16 @@ jobs:
         env:
           TZ: Asia/Tokyo
         run: docker exec mkdocs mkdocs gh-deploy
+
+      - name: Send Slack Finish(Success)
+        if: ${{ success() }}
+        env:
+          HOOK_URL: ${{ secrets.SlackURL }}
+        run: |
+          curl -X POST --data-urlencode "payload={\"channel\": \"#github_actions\", \"username\": \"github_aciton_bot\", \"text\": \"GithubPagesの更新が完了しました！！\"}" ${HOOK_URL}
+      - name: Send Slack Finish(Failure)
+        if: ${{ failure() }}
+        env:
+          HOOK_URL: ${{ secrets.SlackURL }}
+        run: |
+          curl -X POST --data-urlencode "payload={\"channel\": \"#github_actions\", \"username\": \"github_aciton_bot\", \"text\": \"GithubPagesの更新に失敗しました...\"}" ${HOOK_URL}
