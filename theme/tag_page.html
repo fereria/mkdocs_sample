@@ -13,15 +13,19 @@
     req.open('GET', dataFileURL, false);
     req.send(null);
     var data = JSON.parse(req.responseText);
-    var filterd = data.filter(function(page) {
+    var filterd = data.filter(function (page) {
         return page.tags.includes(tag);
     });
     html = '<ul>';
-    filterd.forEach(function(page) {
-        var description = page.description.length !== 0 ? page.description : '';
+    filterd.forEach(function (page) {
+        var description = page.description?.length !== 0 ? page.description : '';
         html += '<li><a href="' + page.url;
         html += '">' + page.title;
-        html += '</a>' + ': ' + description + '</li>';
+        html += '</a>';
+        if (description) {
+            html += ': ' + description;
+        }
+        html += '</li>';
     });
     html += '</ul>';
     document.getElementById('mdoctag-tag-page-list').innerHTML = html;
